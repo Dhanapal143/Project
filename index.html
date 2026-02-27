@@ -1,15 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first website</title>
-</head>
-<body>
-    <h1>Dhanapal.S</h1>
-    <img width="200px" src="profile_image.jpg" alt="">
-    <p>I am Dhanapal From Erode</p>
-    <p>This is my first website so i porud of me</p>
-    <p>ThankYou!</p>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Village Farm Market</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="nav">
+				<div class="brand">Village Farm Market</div>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#products">Products</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#cart" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+				</ul>
+				<button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+			</nav>
+			<section id="home" class="hero">
+				<div class="hero-inner">
+					<h1>Fresh from our fields to your table</h1>
+					<p>Local, organic, and lovingly grown by Farmer Ramu.</p>
+					<a href="#products" class="btn primary">Shop Fresh</a>
+				</div>
+			</section>
+		</header>
+
+		<main>
+			<section id="about" class="about container">
+				<div class="about-card">
+					<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'><rect width='100%' height='100%' fill='%2391c788'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='20' fill='white'>Farmer Ramu</text></svg>" alt="Farmer" />
+					<div>
+						<h2>About the Farmer</h2>
+						<p>Meet Farmer Ramu — a lifelong grower of seasonal vegetables, fruits, rice, and dairy. He uses traditional methods and cares for the land so families can enjoy healthy food.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="products" class="products container">
+				<h2>Products</h2>
+				<div id="products-grid" class="grid"></div>
+			</section>
+
+			<section id="cart" class="cart container">
+				<h2>Shopping Cart</h2>
+				<div id="cart-contents"></div>
+				<div id="cart-actions" class="cart-actions"></div>
+			</section>
+
+			<section id="checkout" class="checkout container hidden">
+				<h2>Checkout</h2>
+				<div class="checkout-box">
+					<p id="checkout-summary"></p>
+					<button id="confirm-checkout" class="btn primary">Confirm &amp; Pay (Demo)</button>
+					<button id="cancel-checkout" class="btn">Cancel</button>
+				</div>
+			</section>
+
+			<section id="bill" class="bill container hidden">
+				<div class="bill-container">
+					<div class="bill-header">
+						<h2>Order Receipt</h2>
+						<p class="bill-title">Village Farm Market</p>
+						<p class="bill-address">Near Greenfields, Market Road, Your Village</p>
+					</div>
+					<div id="bill-content" class="bill-content"></div>
+					<div class="bill-actions">
+						<button id="print-bill" class="btn primary">🖨️ Print Bill</button>
+						<button id="close-bill" class="btn">Close</button>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="contact container">
+				<h2>Contact</h2>
+				<form id="contact-form" class="contact-form">
+					<label>Name <input type="text" id="contact-name" required /></label>
+					<label>Phone <input type="tel" id="contact-phone" required /></label>
+					<label>Message <textarea id="contact-message" rows="4" required></textarea></label>
+					<button type="submit" class="btn primary">Send Message</button>
+				</form>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-grid">
+				<div>
+					<h3>Village Farm Market</h3>
+					<p>Near Greenfields, Market Road, Your Village</p>
+					<p>Phone: +91 98765 43210</p>
+				</div>
+				<div>
+					<h4>Follow</h4>
+					<p class="social-links">
+						<a href="#">Facebook</a> • <a href="#">WhatsApp</a> • <a href="#">Instagram</a>
+					</p>
+				</div>
+			</div>
+			<p class="copyright">© <span id="year"></span> Village Farm Market</p>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>
